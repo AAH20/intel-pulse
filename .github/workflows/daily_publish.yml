@@ -1,0 +1,29 @@
+name: Daily Autonomous Intel Digest
+
+on:
+  schedule:
+    - cron: '0 6 * * *' # Runs at 06:00 UTC daily
+  workflow_dispatch:
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Intel-Pulse Pipeline
+        run: |
+          python3 -m intel_pulse.cli
+
+      - name: Upload Briefing Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-intel-digest
+          path: |
+            LATEST_DIGEST.md
+            LATEST_DIGEST.html

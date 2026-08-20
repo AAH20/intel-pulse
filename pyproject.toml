@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "intel-pulse"
+version = "0.1.0"
+description = "Autonomous High-Signal AI & Deep-Tech Intelligence Engine: Automated RSS/ArXiv Ingestion, Semantic Deduplication, Executive Synthesis & Multi-Channel Publisher"
+authors = [
+    { name = "Ahmed Hassan", email = "ahmed.alaa.hassan25@gmail.com" }
+]
+license = { text = "MIT OR Apache-2.0" }
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.5.0",
+    "typing_extensions>=4.8.0",
+]
+
+[project.scripts]
+intel-pulse = "intel_pulse.cli:main"

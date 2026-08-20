@@ -1,0 +1,24 @@
+{
+  "feeds": [
+    {
+      "name": "HackerNews Best",
+      "url": "https://hnrss.org/best",
+      "category": "industry_trends"
+    },
+    {
+      "name": "ArXiv AI Recent",
+      "url": "https://rss.arxiv.org/rss/cs.AI",
+      "category": "research_breakthroughs"
+    },
+    {
+      "name": "Simon Willison Weblog",
+      "url": "https://simonwillison.net/atom/everything/",
+      "category": "applied_engineering"
+    },
+    {
+      "name": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/feed/",
+      "category": "macro_intelligence"
+    }
+  ]
+}
